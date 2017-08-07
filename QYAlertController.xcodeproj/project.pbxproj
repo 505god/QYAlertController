@@ -13,6 +13,7 @@
 		5DA8FC191F385C570073E2CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DA8FC171F385C570073E2CC /* Main.storyboard */; };
 		5DA8FC1B1F385C570073E2CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DA8FC1A1F385C570073E2CC /* Assets.xcassets */; };
 		5DA8FC1E1F385C570073E2CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DA8FC1C1F385C570073E2CC /* LaunchScreen.storyboard */; };
+		5DA8FC281F385C650073E2CC /* SWAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA8FC271F385C650073E2CC /* SWAlertController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		5DA8FC1A1F385C570073E2CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DA8FC1D1F385C570073E2CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5DA8FC1F1F385C570073E2CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DA8FC261F385C650073E2CC /* SWAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWAlertController.h; sourceTree = "<group>"; };
+		5DA8FC271F385C650073E2CC /* SWAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWAlertController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,7 @@
 				5DA8FC121F385C570073E2CC /* AppDelegate.m */,
 				5DA8FC141F385C570073E2CC /* ViewController.h */,
 				5DA8FC151F385C570073E2CC /* ViewController.m */,
+				5DA8FC251F385C650073E2CC /* Classes */,
 				5DA8FC171F385C570073E2CC /* Main.storyboard */,
 				5DA8FC1A1F385C570073E2CC /* Assets.xcassets */,
 				5DA8FC1C1F385C570073E2CC /* LaunchScreen.storyboard */,
@@ -77,6 +81,15 @@
 				5DA8FC0F1F385C570073E2CC /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5DA8FC251F385C650073E2CC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5DA8FC261F385C650073E2CC /* SWAlertController.h */,
+				5DA8FC271F385C650073E2CC /* SWAlertController.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DA8FC281F385C650073E2CC /* SWAlertController.m in Sources */,
 				5DA8FC161F385C570073E2CC /* ViewController.m in Sources */,
 				5DA8FC131F385C570073E2CC /* AppDelegate.m in Sources */,
 				5DA8FC101F385C570073E2CC /* main.m in Sources */,
