@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/505god/QYAlertController"
 
   s.license      = "MIT"
-  s.author             = { "qcx" => "18915410342@126.com" }
+  s.author       = { "qcx" => "18915410342@126.com" }
   s.platform     = :ios
   s.platform     = :ios, "7.0"
   s.source       = { :git => "https://github.com/505god/QYAlertController.git", :tag => "1.0" }
