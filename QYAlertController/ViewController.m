@@ -98,7 +98,8 @@
             [self showTextAlertWithTitle:self.dataArray[indexPath.row] message:nil appearanceProcess:^(SWAlertController * _Nullable alertMaker) {
                 alertMaker.addActionCancelTitle(@"取消",[UIColor redColor]);
                 alertMaker.addActionMonitorTitle(@"确认",[UIColor redColor]);
-                alertMaker.keyboardType = UIKeyboardTypeNumberPad;
+                alertMaker.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
+                alertMaker.special_characters_prohibited = YES;
             } textRegex:^BOOL(NSString * _Nullable value) {
                 return value.length >6;
             } actionsBlock:^(NSInteger buttonIndex, UIAlertAction * _Nullable action, SWAlertController * _Nullable alertSelf) {

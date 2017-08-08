@@ -180,7 +180,41 @@ typedef void (^SWAlertActionsConfig)(SWAlertActionBlock actionBlock);
     };
 }
 
+-(void)setTextField:(UITextField *)textField {
+    if (self.special_characters_prohibited) {
+        _textField = textField;
+        _textField.delegate = self;
+    }
+}
 
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    return [self isInputRuleNotBlank:string];
+}
+
+- (BOOL)isInputRuleNotBlank:(NSString *)str {
+    NSString *pattern = @"^[a-zA-Z\u4E00-\u9FA5\\d]*$";
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", pattern];
+    BOOL isMatch = [pred evaluateWithObject:str];
+    // 九宫格判断
+    if (!isMatch) {
+        NSString *other = @"➋➌➍➎➏➐➑➒";
+        unsigned long len=str.length;
+        for(int i=0;i<len;i++)
+        {
+            unichar a=[str characterAtIndex:i];
+            if(!((isalpha(a))
+                 ||(isalnum(a))
+                 ||((a=='_') || (a == '-'))
+                 ||((a >= 0x4e00 && a <= 0x9fa6))
+                 ||([other rangeOfString:str].location != NSNotFound)
+                 ))
+                return NO;
+        }
+        return YES;
+        
+    }
+    return isMatch;
+}
 
 LazyLoadMethod(alertActionArray);
 
@@ -251,8 +285,11 @@ NSString const *actionKey = @"actionKey";
             textField.placeholder = alert.placeholder;
             textField.keyboardType = alert.keyboardType;
             textField.secureTextEntry = alert.secureTextEntry;
-
+            textField.textAlignment = alert.textAlignment;
+            
             [textField addTarget:self action:@selector(watchTextFieldMethod:) forControlEvents:UIControlEventEditingChanged];
+            
+            alert.textField = textField;
         }];
         
         //配置响应

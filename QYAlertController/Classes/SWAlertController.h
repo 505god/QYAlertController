@@ -28,6 +28,9 @@ typedef void (^SWAlertActionBlock)(NSInteger buttonIndex, UIAlertAction * _Nulla
 @property (nonatomic, assign) UIKeyboardType keyboardType;
 @property (nullable, nonatomic, copy) NSString *placeholder;
 @property (nonatomic, assign) BOOL secureTextEntry;
+@property (nonatomic) NSTextAlignment textAlignment;
+//禁止特殊字符
+@property (nonatomic, assign) BOOL special_characters_prohibited;
 
 -(SWAlertActionTitle _Nullable )addActionMonitorTitle;
 -(SWAlertActionTitle _Nullable )addActionDefaultTitle;
