@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "QYAlertController"
-  s.version      = "1.1.1"
+  s.version      = "1.1.2"
   s.summary      = "针对系统的UIAlertController进行封装：普通的alert、toast、带输入框的alert、actionsheet"
   s.homepage     = "https://github.com/505god/QYAlertController"
 
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.author       = { "qcx" => "18915410342@126.com" }
   s.platform     = :ios
   s.platform     = :ios, "7.0"
-  s.source       = { :git => "https://github.com/505god/QYAlertController.git", :tag => "1.1.1" }
+  s.source       = { :git => "https://github.com/505god/QYAlertController.git", :tag => "1.1.2" }
   s.source_files  = 'QYAlertController/Classes/*.{h,m}'
   s.requires_arc = true
 
