@@ -1,5 +1,5 @@
 # QYAlertController
-####针对系统的UIAlertController进行封装：普通的alert、toast、带输入框的alert、actionsheet
+针对系统的UIAlertController进行封装：普通的alert、toast、带输入框的alert、actionsheet
 ```
  1. showAlertWithTitle：
 输出alertController
